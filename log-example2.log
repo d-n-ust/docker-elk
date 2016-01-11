@@ -1,0 +1,13 @@
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1","latency":200,"results":{"V1":{"status":"OK","value":1}}, "var_name":"V1" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1","latency":200,"results":{"V2":{"status":"OK","value":3}}, "var_name":"V2" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1","latency":200,"results":{"V3":{"status":"NOT_FOUND"}}, "var_name":"V3" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1","latency":200,"results":{"V0":{"status":"OK","value":0.030}}, "var_name":"V0" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V1":{"status":"OK","value":1}}, "var_name":"V1" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V2":{"status":"OK","value":3}}, "var_name":"V2" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V3":{"status":"NOT_FOUND"}}, "var_name":"V3" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V3":{"status":"NOT_FOUND"}}, "var_name":"V3" }
+{"client":1,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V0":{"status":"OK","value":0.060}}, "var_name":"V0" }
+{"client":2,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V0":{"status":"OK","value":0.060}}, "var_name":"V0" }
+{"client":2,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V0":{"status":"OK","value":0.060}}, "var_name":"V0" }
+{"client":2,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V0":{"status":"OK","value":0.060}}, "var_name":"V0" }
+{"client":2,"abon":"abon_id_1","request_id":"req_id_1_1","latency":200,"results":{"V0":{"status":"OK","value":0.060}}, "var_name":"V0" }

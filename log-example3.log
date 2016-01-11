@@ -1,0 +1,13 @@
+{"client":1,"results":{"V1":{"status":"OK","value":1}} }
+{"client":1,"results":{"V2":{"status":"OK","value":3}} }
+{"client":1,"results":{"V3":{"status":"NOT_FOUND"}} }
+{"client":1,"results":{"V0":{"status":"OK","value":0.030}} }
+{"client":1,"results":{"V1":{"status":"OK","value":1}} }
+{"client":1,"results":{"V2":{"status":"OK","value":3}} }
+{"client":1,"results":{"V3":{"status":"NOT_FOUND"}} }
+{"client":1,"results":{"V3":{"status":"NOT_FOUND"}} }
+{"client":1,"results":{"V0":{"status":"OK","value":0.060}} }
+{"client":2,"results":{"V0":{"status":"OK","value":0.060}} }
+{"client":2,"results":{"V0":{"status":"OK","value":0.060}} }
+{"client":2,"results":{"V0":{"status":"OK","value":0.060}} }
+{"client":2,"results":{"V0":{"status":"OK","value":0.060}} }
