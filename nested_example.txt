@@ -1,0 +1,62 @@
+PUT index_nested
+{
+  "mappings": {
+    "type_nested": {
+      "properties": {
+        "results": {
+          "type": "nested" 
+        }
+      }
+    }
+  }
+}
+
+PUT index_nested/type_nested/1
+{
+  "group" : "fans",
+  "results" : [
+    { 
+      "name" : "V1",
+      "value" : 100  
+    },
+    { 
+      "name" : "V2",
+      "value" : 200  
+    },
+    { 
+      "name" : "V3",
+      "value" : 300  
+    }
+  ]
+}
+
+PUT index_nested/type_nested/2
+{
+  "group" : "fans",
+  "results" : [
+    { 
+      "name" : "V1",
+      "value" : 140  
+    },
+    { 
+      "name" : "V3",
+      "value" : 500  
+    }
+  ]
+}
+
+GET /index_nested/_search
+{
+  "aggs" : {
+    "results" : {
+      "nested" : {
+        "path" : "results"
+      },
+      "aggs" : {
+        "a1" : { 
+          "terms" : { "field" : "results.name" } 
+        }
+      }
+    }
+  } 
+}
