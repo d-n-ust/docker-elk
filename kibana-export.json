@@ -1,0 +1,969 @@
+[
+  {
+    "_id": "V0,-распределение",
+    "_type": "dashboard",
+    "_source": {
+      "title": "V0, распределение",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"V0,-распределение-по-бинам-area-chart,-distribution,-10\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":4,\"size_y\":4,\"col\":9,\"row\":1},{\"id\":\"V0,-распределение-по-бинам-area-chart,-distribution,-100\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":8,\"size_y\":4,\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-12h",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "latency",
+    "_type": "dashboard",
+    "_source": {
+      "title": "latency",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"last-12-hours,-V1,-latency\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":1},{\"id\":\"last-12-hours,-V2,-latency\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":4,\"size_y\":3,\"col\":5,\"row\":4},{\"id\":\"last-12-hours,-V3,-latency\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":4,\"size_y\":3,\"col\":5,\"row\":1},{\"id\":\"last-12-hours,-client:1,-latency\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":4,\"size_y\":3,\"col\":9,\"row\":1},{\"id\":\"last-12-hours,-client:2,-latency\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":4},{\"id\":\"last-12-hours,-client:3,-latency\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":4,\"size_y\":3,\"col\":9,\"row\":4}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-12h",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "Все-переменные,-распределение",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Все переменные, распределение",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"V1,-распределение-по-бинам-area-chart,-distribution\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":4},{\"id\":\"V2,-распределение-по-бинам-area-chart,-distribution\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":4,\"size_y\":3,\"col\":5,\"row\":4},{\"id\":\"V3,-распределение-по-бинам-area-chart,-distribution\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":4,\"size_y\":3,\"col\":9,\"row\":4},{\"id\":\"client:1,-V1,-распределение-по-бинам-area-chart\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":8,\"size_y\":3,\"col\":5,\"row\":1},{\"id\":\"client:1,-V1,-распределение-по-бинам-pie-chart\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":1}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-12h",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:2,-has-NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:2, has NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.\\\\*status:NOT_FOUND && client:2\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-has-NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, has NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.\\\\*status:NOT_FOUND\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:3,-has-NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:3, has NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.\\\\*status:NOT_FOUND && client:3\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-has-FAIL",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, has FAIL",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.\\\\*status:FAIL\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-has-NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, has NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.\\\\*status:NOT_FOUND && client:1\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V1:OK",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V1:OK",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V1.status:OK\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V2:OK",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V2:OK",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V2.status:OK\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V3:NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V3:NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V3.status:NOT_FOUND\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V1:NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V1:NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V1.status:NOT_FOUND\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V1:OK",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V1:OK",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V1.status:OK\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V1:NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V1:NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V1.status:NOT_FOUND\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V2:NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V2:NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V2.status:NOT_FOUND\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V1:FAIL",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V1:FAIL",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V1.status:FAIL\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V2:FAIL",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V2:FAIL",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V2.status:FAIL\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V3:NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V3:NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V3.NOT_FOUND\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V3:OK",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V3:OK",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V3.status:OK\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V3:FAIL",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V3:FAIL",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"results.V3.status:FAIL\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V2:NOT_FOUND",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V2:NOT_FOUND",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V2.NOT_FOUND\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V2:FAIL",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V2:FAIL",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V2.FAIL\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-exists:V1",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, exists:V1",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && _exists_:results.V1\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V1:FAIL",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V1:FAIL",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V1.FAIL\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V2:OK",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V2:OK",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V2.OK\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V3:OK",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V3:OK",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V3.OK\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-V3:FAIL",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1, V3:FAIL",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1 && results.V3.FAIL\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V1",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V1",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"_exists_:results.V1\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:3",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:3",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:3\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:1",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:1\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V2",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V2",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"_exists_:results.V2\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:2",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, client:2",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"client:2\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V3",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V3",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"_exists_:results.V3\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V0",
+    "_type": "search",
+    "_source": {
+      "title": "last 12 hours, V0",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query_string\":{\"query\":\"_exists_:results.V0\",\"analyze_wildcard\":true}}}"
+      }
+    }
+  },
+  {
+    "_id": "last-6-hours",
+    "_type": "search",
+    "_source": {
+      "title": "last-6-hours",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "1",
+    "_type": "search",
+    "_source": {
+      "title": "last 6 hours",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "last-4-hours",
+    "_type": "search",
+    "_source": {
+      "title": "last-4-hours",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"@timestamp:[now-4h TO now]\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  },
+  {
+    "_id": "V0,-распределение-по-бинам-area-chart,-distribution,-100",
+    "_type": "visualization",
+    "_source": {
+      "title": "V0, распределение по бинам - area chart, distribution, 100",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"range\",\"schema\":\"segment\",\"params\":{\"field\":\"results.V0.value\",\"ranges\":[{\"from\":0,\"to\":0.01},{\"from\":0.01,\"to\":0.02},{\"from\":0.02,\"to\":0.03},{\"from\":0.03,\"to\":0.04},{\"from\":0.04,\"to\":0.05},{\"from\":0.05,\"to\":0.06},{\"from\":0.06,\"to\":0.07},{\"from\":0.07,\"to\":0.08},{\"from\":0.08,\"to\":0.09},{\"from\":0.09,\"to\":0.1},{\"from\":0.1,\"to\":0.11},{\"from\":0.11,\"to\":0.12},{\"from\":0.12,\"to\":0.13},{\"from\":0.13,\"to\":0.14},{\"from\":0.14,\"to\":0.15},{\"from\":0.15,\"to\":0.16},{\"from\":0.16,\"to\":0.17},{\"from\":0.17,\"to\":0.18},{\"from\":0.18,\"to\":0.19},{\"from\":0.19,\"to\":0.2},{\"from\":0.2,\"to\":0.21},{\"from\":0.21,\"to\":0.22},{\"from\":0.22,\"to\":0.23},{\"from\":0.23,\"to\":0.24},{\"from\":0.24,\"to\":0.25},{\"from\":0.25,\"to\":0.26},{\"from\":0.26,\"to\":0.27},{\"from\":0.27,\"to\":0.28},{\"from\":0.28,\"to\":0.29},{\"from\":0.29,\"to\":0.3},{\"from\":0.3,\"to\":0.31},{\"from\":0.31,\"to\":0.32},{\"from\":0.32,\"to\":0.33},{\"from\":0.33,\"to\":0.34},{\"from\":0.34,\"to\":0.35},{\"from\":0.35,\"to\":0.36},{\"from\":0.36,\"to\":0.37},{\"from\":0.37,\"to\":0.38},{\"from\":0.38,\"to\":0.39},{\"from\":0.39,\"to\":0.4},{\"from\":0.4,\"to\":0.41},{\"from\":0.41,\"to\":0.42},{\"from\":0.42,\"to\":0.43},{\"from\":0.43,\"to\":0.44},{\"from\":0.44,\"to\":0.45},{\"from\":0.45,\"to\":0.46},{\"from\":0.46,\"to\":0.47},{\"from\":0.47,\"to\":0.48},{\"from\":0.48,\"to\":0.49},{\"from\":0.49,\"to\":0.5},{\"from\":0.5,\"to\":0.51},{\"from\":0.51,\"to\":0.52},{\"from\":0.52,\"to\":0.53},{\"from\":0.53,\"to\":0.54},{\"from\":0.54,\"to\":0.55},{\"from\":0.55,\"to\":0.56},{\"from\":0.56,\"to\":0.57},{\"from\":0.57,\"to\":0.58},{\"from\":0.58,\"to\":0.59},{\"from\":0.59,\"to\":0.6},{\"from\":0.6,\"to\":0.61},{\"from\":0.61,\"to\":0.62},{\"from\":0.62,\"to\":0.63},{\"from\":0.63,\"to\":0.64},{\"from\":0.64,\"to\":0.65},{\"from\":0.65,\"to\":0.66},{\"from\":0.66,\"to\":0.67},{\"from\":0.67,\"to\":0.68},{\"from\":0.68,\"to\":0.69},{\"from\":0.69,\"to\":0.7},{\"from\":0.7,\"to\":0.71},{\"from\":0.71,\"to\":0.72},{\"from\":0.72,\"to\":0.73},{\"from\":0.73,\"to\":0.74},{\"from\":0.74,\"to\":0.75},{\"from\":0.75,\"to\":0.76},{\"from\":0.76,\"to\":0.77},{\"from\":0.77,\"to\":0.78},{\"from\":0.78,\"to\":0.79},{\"from\":0.79,\"to\":0.8},{\"from\":0.8,\"to\":0.81},{\"from\":0.81,\"to\":0.82},{\"from\":0.82,\"to\":0.83},{\"from\":0.83,\"to\":0.84},{\"from\":0.84,\"to\":0.85},{\"from\":0.85,\"to\":0.86},{\"from\":0.86,\"to\":0.87},{\"from\":0.87,\"to\":0.88},{\"from\":0.88,\"to\":0.89},{\"from\":0.89,\"to\":0.9},{\"from\":0.9,\"to\":0.91},{\"from\":0.91,\"to\":0.92},{\"from\":0.92,\"to\":0.93},{\"from\":0.93,\"to\":0.94},{\"from\":0.94,\"to\":0.95},{\"from\":0.95,\"to\":0.96},{\"from\":0.96,\"to\":0.97},{\"from\":0.97,\"to\":0.98},{\"from\":0.98,\"to\":0.99},{\"from\":0.99,\"to\":1}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V0",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "V0,-распределение-по-бинам-area-chart,-distribution,-10",
+    "_type": "visualization",
+    "_source": {
+      "title": "V0, распределение по бинам - area chart, distribution, 10",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"range\",\"schema\":\"segment\",\"params\":{\"field\":\"results.V0.value\",\"ranges\":[{\"from\":0,\"to\":0.1},{\"from\":0.1,\"to\":0.2},{\"from\":0.2,\"to\":0.3},{\"from\":0.3,\"to\":0.4},{\"from\":0.4,\"to\":0.5},{\"from\":0.5,\"to\":0.6},{\"from\":0.6,\"to\":0.7},{\"from\":0.7,\"to\":0.8},{\"from\":0.8,\"to\":0.9},{\"from\":0.9,\"to\":1}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V0",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "V2,-распределение-по-бинам-area-chart,-distribution",
+    "_type": "visualization",
+    "_source": {
+      "title": "V2, распределение по бинам - area chart, distribution",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"range\",\"schema\":\"segment\",\"params\":{\"field\":\"results.V2.value\",\"ranges\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":2},{\"from\":2,\"to\":3},{\"from\":3,\"to\":4},{\"from\":4,\"to\":5},{\"from\":5,\"to\":6},{\"from\":6,\"to\":7},{\"from\":7,\"to\":8},{\"from\":8,\"to\":9}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V2",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V2,-latency",
+    "_type": "visualization",
+    "_source": {
+      "title": "last 12 hours, V2, latency",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"latency\",\"ranges\":[{\"from\":0,\"to\":2000},{\"from\":2000,\"to\":4000},{\"from\":4000,\"to\":1000000}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V2",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V3,-latency",
+    "_type": "visualization",
+    "_source": {
+      "title": "last 12 hours, V3, latency",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"latency\",\"ranges\":[{\"from\":0,\"to\":2000},{\"from\":2000,\"to\":4000},{\"from\":4000,\"to\":100000}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V3",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours-|-all-reqPerSec",
+    "_type": "visualization",
+    "_source": {
+      "title": "last 12 hours | all reqPerSec",
+      "visState": "{\"type\":\"area\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"smoothLines\":false,\"scale\":\"linear\",\"interpolate\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:3,-latency",
+    "_type": "visualization",
+    "_source": {
+      "title": "last 12 hours, client:3, latency",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"latency\",\"ranges\":[{\"from\":0,\"to\":2000},{\"from\":2000,\"to\":4000},{\"from\":4000,\"to\":1000000}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-client:3",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:1,-latency",
+    "_type": "visualization",
+    "_source": {
+      "title": "last 12 hours, client:1, latency",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"latency\",\"ranges\":[{\"from\":0,\"to\":2000},{\"from\":2000,\"to\":4000},{\"from\":4000,\"to\":10000000}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-client:1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "client:1,-V1,-распределение-по-бинам-area-chart",
+    "_type": "visualization",
+    "_source": {
+      "title": "client:1, V1, распределение по бинам - area chart",
+      "visState": "{\"type\":\"area\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"smoothLines\":true,\"scale\":\"linear\",\"interpolate\":\"linear\",\"mode\":\"percentage\",\"times\":[],\"addTimeMarker\":true,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"results.V1.value\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"_term\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-client:1,-exists:V1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "client:1,-V1,-распределение-по-бинам-pie-chart",
+    "_type": "visualization",
+    "_source": {
+      "title": "client:1, V1, распределение по бинам - pie chart",
+      "visState": "{\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"results.V1.value\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-client:1,-exists:V1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "V1,-распределение-по-бинам-area-chart,-distribution",
+    "_type": "visualization",
+    "_source": {
+      "title": "V1, распределение по бинам - area chart, distribution",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"range\",\"schema\":\"segment\",\"params\":{\"field\":\"results.V1.value\",\"ranges\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":2},{\"from\":2,\"to\":3},{\"from\":3,\"to\":4},{\"from\":4,\"to\":5},{\"from\":5,\"to\":6},{\"from\":6,\"to\":7},{\"from\":7,\"to\":8},{\"from\":8,\"to\":9}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-client:2,-latency",
+    "_type": "visualization",
+    "_source": {
+      "title": "last 12 hours, client:2, latency",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"latency\",\"ranges\":[{\"from\":0,\"to\":2000},{\"from\":2000,\"to\":4000},{\"from\":4000,\"to\":10000000}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-client:2",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "V3,-распределение-по-бинам-area-chart,-distribution",
+    "_type": "visualization",
+    "_source": {
+      "title": "V3, распределение по бинам - area chart, distribution",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"range\",\"schema\":\"segment\",\"params\":{\"field\":\"results.V3.value\",\"ranges\":[{\"from\":0,\"to\":1},{\"from\":1,\"to\":2},{\"from\":2,\"to\":3},{\"from\":3,\"to\":4},{\"from\":4,\"to\":5},{\"from\":5,\"to\":6},{\"from\":6,\"to\":7},{\"from\":7,\"to\":8},{\"from\":8,\"to\":9}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V3",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "last-12-hours,-V1,-latency",
+    "_type": "visualization",
+    "_source": {
+      "title": "last 12 hours, V1, latency",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"latency\",\"ranges\":[{\"from\":0,\"to\":2000},{\"from\":2000,\"to\":4000},{\"from\":4000,\"to\":1000000}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "last-12-hours,-V1",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  }
+]
