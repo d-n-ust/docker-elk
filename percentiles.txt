@@ -1,0 +1,12 @@
+GET /logstash-2016.01.13/_search
+{
+    "size": 0, 
+    "aggs" : {
+        "load_time_outlier" : {
+            "percentiles" : {
+                "field" : "results.V0.value",
+                "percents" : [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+            }
+        }
+    }
+}
