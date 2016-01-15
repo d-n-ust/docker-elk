@@ -1,0 +1,12 @@
+PUT requests-index-2016.01.15
+{
+  "mappings": {
+    "requests": {
+      "properties": {
+        "post_date" : {
+          "type": "date"
+	      } 
+      }
+    }
+  }
+}
